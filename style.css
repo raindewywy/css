@@ -1,0 +1,200 @@
+/* ===== Reset & Base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Body : Wine Gradient ===== */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+    text-align: center;
+
+    /* 🍷 Wine / Burgundy Gradient */
+    background: linear-gradient(
+        135deg,
+        #2b0f14,
+        #4a1c24,
+        #6d2932,
+        #8b3a3a
+    );
+    background-size: 300% 300%;
+    animation: wineBG 14s ease infinite;
+
+    color: #f5e9e2;
+}
+
+/* ===== Background Animation ===== */
+@keyframes wineBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===== Header ===== */
+header {
+    padding: 30px 20px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #f5e9e2;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    background: rgba(40, 10, 15, 0.8);
+    padding: 12px 25px;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: 600;
+}
+
+.navbar a:hover {
+    color: #e6b8b7;
+}
+
+/* ===== Section (Glass Wine Card) ===== */
+.section {
+    width: 85%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px;
+
+    background: rgba(255, 240, 235, 0.12);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(40, 10, 15, 0.45);
+
+    color: #f5e9e2;
+}
+
+/* ===== Headings ===== */
+.section h2 {
+    margin: 35px 0 20px;
+    font-size: 1.8rem;
+    color: #e6b8b7; /* rose wine */
+}
+
+/* ===== Images ===== */
+.profile-img {
+    width: 300px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 15px 30px rgba(40, 10, 15, 0.5);
+}
+
+.activity-img {
+    width: 420px;
+    max-width: 100%;
+    border-radius: 15px;
+    margin: 25px 0;
+    box-shadow: 0 10px 25px rgba(40, 10, 15, 0.5);
+}
+
+/* ===== Text ===== */
+.section p {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+/* ===== Lists ===== */
+ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+ul li {
+    margin: 8px 0;
+    font-size: 1.05rem;
+}
+
+/* ===== Form ===== */
+form input,
+form select,
+form textarea {
+    width: 260px;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border: 1px solid #8b3a3a;
+    outline: none;
+}
+
+form textarea {
+    resize: none;
+}
+
+form button {
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: none;
+    background: #8b3a3a;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #6d2932;
+}
+
+/* ===== Activity Grid : 2 รูปต่อแถว ===== */
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 25px 0 50px;
+}
+
+/* Activity Card */
+.activity-card {
+    background: rgba(255, 245, 240, 0.15);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(40, 10, 15, 0.45);
+    color: #f5e9e2;
+}
+
+/* Card Image */
+.activity-card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.activity-card img:hover {
+    transform: scale(1.05);
+}
+
+/* Card Text */
+.activity-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* ===== Footer ===== */
+footer {
+    margin-top: 60px;
+    padding: 25px;
+    background: rgba(40, 10, 15, 0.9);
+    color: #fff;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 600px) {
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+}
